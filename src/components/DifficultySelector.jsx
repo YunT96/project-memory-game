@@ -5,9 +5,9 @@ const DifficultySelector = ({ onSelectDifficulty }) => {
   return (
     <div className="difficulty-selector">
       <h2>Select Difficulty</h2>
-      <button onClick={() => onSelectDifficulty("easy")}>Easy</button>
-      <button onClick={() => onSelectDifficulty("medium")}>Medium</button>
-      <button onClick={() => onSelectDifficulty("hard")}>Hard</button>
+      <button onClick={() => onSelectDifficulty("easy")}>Normal</button>
+      <button onClick={() => onSelectDifficulty("medium")}>Hard</button>
+      <button onClick={() => onSelectDifficulty("hard")}>Impossible</button>
     </div>
   );
 };

@@ -21,7 +21,9 @@ const App = () => {
         {!difficulty ? (
           <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
         ) : (
-          <GameBoard difficulty={difficulty} onRestart={handleRestart} />
+          <div className="game-container">
+            <GameBoard difficulty={difficulty} onRestart={handleRestart} />
+          </div>
         )}
       </div>
     </div>
