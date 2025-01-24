@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "../styles/Card.css";
 
 const Card = ({ card, onClick }) => {

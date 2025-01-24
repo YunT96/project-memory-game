@@ -10,28 +10,48 @@
   align-items: center;
 }
 
+:root {
+  --game-padding: clamp(0.5rem, 3vmin, 1.5rem);
+  --grid-gap: clamp(0.75rem, 2vmin, 1.25rem);
+  --card-animation-duration: 0.3s;
+}
+
 .game-board {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: var(--grid-gap);
+  padding: var(--game-padding);
+  container-type: inline-size;
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  position: relative;
 }
 
-.card {
-  transition: transform 0.3s ease;
-}
-
-.card.shuffle {
-  animation: shuffle 0.3s ease;
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes shuffle {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%,
   100% {
     transform: translateY(0);
   }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.shuffle {
+  animation: shuffle var(--card-animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
