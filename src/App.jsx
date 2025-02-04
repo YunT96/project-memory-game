@@ -16,16 +16,15 @@ const App = () => {
   };
 
   return (
-    <div>
-      <div>
-        {!difficulty ? (
-          <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
-        ) : (
-          <div className="game-container">
-            <GameBoard difficulty={difficulty} onRestart={handleRestart} />
-          </div>
-        )}
-      </div>
+    <div className="game-background">
+      {/* This background container will cover the whole viewport */}
+      {!difficulty ? (
+        <DifficultySelector onSelectDifficulty={handleSelectDifficulty} />
+      ) : (
+        <div className="game-container">
+          <GameBoard difficulty={difficulty} onRestart={handleRestart} />
+        </div>
+      )}
     </div>
   );
 };

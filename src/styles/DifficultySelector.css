@@ -1,0 +1,9 @@
+.difficulty-selector {
+  position: relative; /* or absolute */
+  bottom: 10rem; /* Moves the div up */
+}
+
+.difficulty-selector > * {
+  margin: 1rem;
+  padding: 1rem 1rem;
+}

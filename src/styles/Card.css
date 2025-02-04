@@ -53,10 +53,10 @@
 
 @media (hover: hover) {
   .card:hover {
-    box-shadow: 0 0 15px rgba(67, 155, 255, 0.7);
+    box-shadow: 0 0 15px rgb(255, 0, 0);
     transform: scale(1.04);
     cursor: pointer;
-    transition: transform 0.1s linear, box-shadow 0.1s linear;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
   }
 }
 

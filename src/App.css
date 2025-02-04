@@ -1,6 +1,57 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.game-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/src/assets/Images/pokemon-pixel-wallpaper.jpg");
+  background-size: cover; /* Change to cover for better responsiveness */
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  .game-background {
+    background-size: 400%; /* More zoom for smaller screens */
+    background-position: center 25%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .game-background {
+    background-size: 300%;
+    background-position: center 35%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .game-background {
+    background-size: 180%; /* Your original zoom level */
+    background-position: center 50%;
+  }
+}
+
+/* For landscape orientation on mobile devices */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .game-background {
+    background-size: 250%;
+    background-position: center 30%;
+  }
 }
